@@ -1,1 +1,53 @@
 
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>蟲神器 Online</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>蟲神器 Online</h1>
+    <p>オンライン対戦・デッキ構築</p>
+  </header>
+
+  <nav>
+    <button onclick="show('home')">ホーム</button>
+    <button onclick="show('library')">カード図鑑</button>
+    <button onclick="show('deck')">デッキ編集</button>
+    <button onclick="show('battle')">対戦</button>
+  </nav>
+
+  <main>
+    <section id="home">
+      <h2>ホーム</h2>
+      <p>蟲神器 Online へようこそ！</p>
+      <button onclick="show('library')">カード図鑑を見る</button>
+      <button onclick="show('deck')">デッキを作る</button>
+      <button onclick="show('battle')">対戦する</button>
+    </section>
+
+    <section id="library" class="hidden">
+      <h2>カード図鑑</h2>
+      <input id="search" placeholder="カード名を検索" oninput="renderCards()">
+      <div id="cardlist" class="grid"></div>
+    </section>
+
+    <section id="deck" class="hidden">
+      <h2>デッキ編集</h2>
+      <p>デッキ枚数：<span id="deckcount">0</span></p>
+      <div id="decklist" class="grid"></div>
+    </section>
+
+    <section id="battle" class="hidden">
+      <h2>対戦画面</h2>
+      <p>対戦機能を準備中！</p>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
+
